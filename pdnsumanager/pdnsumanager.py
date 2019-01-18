@@ -55,8 +55,10 @@ def main():
 
     parser.add_argument("-d", "--debug", help="increase output verbosity",
                         action="store_true")
-    parser.add_argument("--dry-run", help="don't make changes, only print",
-                        action="store_true")
+
+    # TODO.
+    # parser.add_argument("--dry-run", help="don't make changes, only print",
+    #                     action="store_true")
 
     args = parser.parse_args()
     config = vars(args)
