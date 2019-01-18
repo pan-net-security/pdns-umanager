@@ -12,7 +12,7 @@ and sub-zone management.
 virtualenv -p python3 .venv
 . .venv/bin/activate
 pip3 install git+https://github.com/pan-net-security/pdns-umanager.git >/dev/null
-pdnsumanager --help
+pdns-umanager --help
 usage: pdnsumanager [-h] [--pdns-server-url PDNS_SERVER_URL]
                     [--pdns-api-key PDNS_API_KEY] [-f FILE]
                     [--ca-cert-file CA_CERT_FILE] [-d] [--dry-run]
