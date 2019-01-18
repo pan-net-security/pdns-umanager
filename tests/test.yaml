@@ -1,0 +1,42 @@
+---
+# the data structure should be read as:
+#
+# <zone_name>:
+#    <rrset_name>:
+#        type: <CNAME|A>
+#        records:
+#            - <value1>
+#            - <value2 ..>
+#        ttls: <integer>
+#
+#
+# DNS canonical format is optional (it's enforced in the script)
+
+example.org:
+   # 'type' can be omitted, defaults to 'cname'
+   wwww:
+        records:
+          - "web.frontend.example.org"
+
+   # 'type can also be explicit, case insensitive
+   monitoring:
+        type: 'cNaMe'
+        records:
+          - "web.monitoring.example.org"
+
+   # records could be multiple values
+   hello:
+        type: "A"
+        records:
+          - "172.162.3.5"
+          - "172.162.3.6"
+
+   # empty records effectively delete the rrset
+   web:
+        type: "A"
+        records:
+          - ""
+
+#   # reserved type, 'zone'; coming soon
+#   monitoring:
+#        type: "zone"
